@@ -4,12 +4,6 @@ export const addGuess = number => ({
   number
 });
 
-export const SET_FEEDBACK = "SET_FEEDBACK";
-export const setFeedback = feedback => ({
-  type: SET_FEEDBACK,
-  feedback
-});
-
 export const TOGGLE_INSTRUCTIONS = "TOGGLE_INSTRUCTIONS";
 export const toggleInstructions = {
   type: TOGGLE_INSTRUCTIONS

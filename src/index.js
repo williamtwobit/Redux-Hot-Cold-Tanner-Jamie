@@ -3,6 +3,7 @@ import {addGuess, toggleInstructions, newGame} from './actions/index';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import store from './store';
+import {Provider} from 'react-redux';
 
 import './reset.css';
 import './index.css';
@@ -22,6 +23,8 @@ console.log(store.getState());
 import Game from './components/game';
 
 ReactDOM.render(
-    <Game />,
+    <Provider store={store}>
+        <Game />
+    </Provider>,
     document.getElementById('root')
 );

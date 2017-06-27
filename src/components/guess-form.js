@@ -6,7 +6,7 @@ import './guess-form.css';
 export class GuessForm extends React.Component {
     onGuess(event) {
         event.preventDefault();
-        this.prop.dispatch(actions.addGuess(event));
+        this.props.dispatch(actions.addGuess(this.input.value));
         this.input.value = '';
     }
 

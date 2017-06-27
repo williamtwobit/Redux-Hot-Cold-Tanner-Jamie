@@ -15,7 +15,6 @@ export class TopNav extends React.Component {
     }
 
     render() {
-          console.log(this.props);
         return (
             <nav>
                 <ul className="clearfix">

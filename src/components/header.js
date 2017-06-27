@@ -6,19 +6,6 @@ import InfoModal from './info-modal';
 import './header.css';
 
 export class Header extends React.Component  {
-    constructor(props) {
-        super(props);
-        // this.state = {
-        //     showInfoModal: false
-        // };
-    }
-
-    toggleInfoModal() {
-        this.setState({
-            showInfoModal: !this.state.showInfoModal
-        });
-    }
-
     render() {
         let infoModal;
         if (this.props.instructions) {

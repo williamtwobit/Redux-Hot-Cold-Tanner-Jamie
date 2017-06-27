@@ -6,7 +6,7 @@ import './info-modal.css';
 export class InfoModal extends React.Component {
     onClose(event) {
         event.preventDefault();
-        this.props.dispatch(actions.toggleInstructions());
+        this.props.dispatch(actions.toggleInstructions);
     }
 
     render() {

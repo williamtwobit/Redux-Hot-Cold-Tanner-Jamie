@@ -8,9 +8,9 @@ import './header.css';
 export class Header extends React.Component  {
     constructor(props) {
         super(props);
-        this.state = {
-            showInfoModal: false
-        };
+        // this.state = {
+        //     showInfoModal: false
+        // };
     }
 
     toggleInfoModal() {
@@ -21,7 +21,7 @@ export class Header extends React.Component  {
 
     render() {
         let infoModal;
-        if (this.props.showInfoModal) {
+        if (this.props.instructions) {
             infoModal = <InfoModal />;
         }
 
@@ -37,7 +37,7 @@ export class Header extends React.Component  {
 };
 
 const mapStateToProps = (state) => ({
-    showInfoModal: state.showInfoModal
+    instructions: state.instructions
 });
 
 export default connect(mapStateToProps)(Header)

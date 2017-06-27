@@ -1,5 +1,4 @@
 import React from 'react';
-import{connect} from 'react-redux';
 import Header from './header';
 import GuessSection from './guess-section';
 import GuessCount  from './guess-count';
@@ -60,13 +59,11 @@ export default class Game extends React.Component {
     render() {
         return (
             <div>
-                <Header onNewGame={() => this.newGame()}/>
-                <GuessSection feedback={this.state.feedback}
-                    onGuess={(guess) => this.guess(guess)} />
-                <GuessCount count={this.state.guesses.length} />
-                <GuessList guesses={this.state.guesses} />
+                <Header />
+                <GuessSection />
+                <GuessCount />
+                <GuessList />
             </div>
         );
     }
-}
-
+};

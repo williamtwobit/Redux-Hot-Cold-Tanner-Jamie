@@ -6,12 +6,12 @@ import './top-nav.css';
 export class TopNav extends React.Component {
     onNewGame(event) {
         event.preventDefault();
+        this.props.dispatch(actions.newGame());
     }
 
     onInfo(event) {
         event.preventDefault();
         this.props.dispatch(actions.toggleInstructions);
-        // this.props.dispatch({type: 'TOGGLE_INSTRUCTIONS'});
     }
 
     render() {

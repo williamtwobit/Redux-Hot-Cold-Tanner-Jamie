@@ -4,12 +4,21 @@ import GuessForm from './guess-form';
 
 import './guess-section.css';
 
-export default function GuessSection(props) {
+import {connect} from 'react-redux';
+
+export function GuessSection(props) {
     return (
         <section>
             <h2 id="feedback">{props.feedback}</h2>
-            <GuessForm onGuess={props.onGuess} />
+            <GuessForm />
         </section>
     );
 }
+
+const mapStateToProps = (state)=> ({
+    feedback: state.feedback
+});
+
+
+export default connect(mapStateToProps)(GuessSection);
 
